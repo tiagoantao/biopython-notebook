@@ -8,4 +8,11 @@ of otherwise existing content.
 Most content here is based on the Biopython tutorial or on Peter Cock's
 workshop.
 
+
+Docker instructions
+-------------------
+
+For docker we need to download a few example files (at least for the
+notebook about Sequence Input and Output)
+
 ./tiago
