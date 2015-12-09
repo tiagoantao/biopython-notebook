@@ -1,3 +1,5 @@
+#TODO WARNING This is very much a draft, it seems to work.
+
 import pypandoc
 import nbformat
 from nbformat.sign import NotebookNotary
