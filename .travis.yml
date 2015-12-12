@@ -1,8 +1,10 @@
+sudo: false
+
 python:
   - "3.5"
 
 before_install:
-  - "sudo apt-get install python-biopython"
+  - "pip install biopython"
   - "pip install ipython"
   - "pip install jupyter"
 
