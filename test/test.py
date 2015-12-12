@@ -19,9 +19,10 @@ nblist = ['01 - Introduction.ipynb',
           '99 - Credits.ipynb']
 
 ex = ExecutePreprocessor()
-ex.timeout = 30  # seconds
+ex.timeout = 180  # seconds
 ex.interrupt_on_timeout = True
 
+has_error = False
 for notebook in nblist:
     nb = nbformat.read(notebook, as_version=4)
     try:
@@ -29,5 +30,7 @@ for notebook in nblist:
         print('Pass: ' + notebook)
     except CellExecutionError as e:
         print('Fail: '  + notebook + ': ' + e.traceback[-1])
+        has_error = True
 
 os.chdir('..')
+sys.exit(-1 if has_error else 0)
