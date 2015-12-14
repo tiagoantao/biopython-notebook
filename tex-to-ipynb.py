@@ -1,4 +1,5 @@
 # WARNING This is very much a draft, it seems to work.
+# Some code in the examples is not marked as docstrings i.e. There is no >>> before the line of code.
 # TODO, BUGFIX, assumes docstring like code in verbatim tag,
 # TODO cont. ignores everything with without >>> or ....
 
@@ -40,16 +41,33 @@ def convert_file(texfile, ipynbfile):
                         codeflag = True
                         mb_section = ""
                 elif codeflag and ('>>> ' in line or '... ' in line):
+                    # This should be code
+                    codeflag += 1
                     line = line.strip('>>> ').strip('... ')
                     code_section = code_section + line
-                elif codeflag and '>>> ' not in line and '... ' not in line and 'ENDCODE' not in line:
+                elif codeflag == 1 and not 'ENDCODE' in line:
+                    # codeflag is still 1, no code seen yet, This might be a section marked verbatium
+                    # but not code, will write this to a code block.
+                    code_section = code_section + line
+                elif codeflag > 1 and '>>> ' not in line and '... ' not in line and 'ENDCODE' not in line:
+                    # This should be the results of the code
+                    # lets write what we have to a code cell
                     if code_section:
                         nb.cells.append(nbformat.v4.new_code_cell(source=code_section))
                     code_section = ""
-                    codeflag = True # till in code block?
-                elif 'ENDCODE' in line:
+                    codeflag += 1 # still in code block?
+                elif 'ENDCODE' in line and codeflag == 1:
                     #print(code_section)
                     if code_section:
+                        # if we got here this is probably a verbatium section.
+                        code_section = '```\n' + code_section.lstrip('    ').replace('\n    ', '\n') + '\n```'
+                        nb.cells.append(nbformat.v4.new_markdown_cell(code_section))
+                    code_section = ""
+                    codeflag = False
+                elif 'ENDCODE' in line and codeflag > 1:
+                    #print(code_section)
+                    if code_section:
+                        # if we got here this is probably a verbatium section.
                         nb.cells.append(nbformat.v4.new_code_cell(source=code_section))
                     code_section = ""
                     codeflag = False
