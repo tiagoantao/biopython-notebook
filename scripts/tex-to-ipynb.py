@@ -82,7 +82,7 @@ def convert_set(files, outfolder=''):
     :param outfolder: save files to this location
     :return: Tuple: count of files listed, count of files converted, count of files ignored
     """
-    if isinstance(files, str): # convert folder
+    if isinstance(files, str): # convert all file in folder
         files = [files + f for f in listdir(files) if isfile(join(files, f)) and f.endswith('.tex')]
         for tfile in files:
             #print(tfile)
