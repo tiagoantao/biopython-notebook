@@ -107,5 +107,5 @@ def convert_set(files, outfolder=''):
 
     # TODO count files
 
-
-#convert_set('/Users/vincentdavis/VersionControl/biopython/Doc/Tutorial/', 'Tutorial/')
+# Example converts all the tex files in /biopython/Doc/Tutorial/ and saves them to the folder notebooks
+# convert_set('biopython/Doc/Tutorial/', 'notebooks/')
