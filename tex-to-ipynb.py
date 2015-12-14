@@ -1,4 +1,6 @@
-#TODO WARNING This is very much a draft, it seems to work.
+# WARNING This is very much a draft, it seems to work.
+# TODO, BUGFIX, assumes docstring like code in verbatim tag,
+# TODO cont. ignores everything with without >>> or ....
 
 import pypandoc
 import nbformat
