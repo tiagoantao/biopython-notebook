@@ -1,7 +1,5 @@
 # WARNING This is very much a draft, it seems to work.
 # Some code in the examples is not marked as docstrings i.e. There is no >>> before the line of code.
-# TODO, BUGFIX, assumes docstring like code in verbatim tag,
-# TODO cont. ignores everything with without >>> or ....
 
 import pypandoc
 import nbformat
@@ -110,4 +108,4 @@ def convert_set(files, outfolder=''):
     # TODO count files
 
 
-convert_set('/Users/vincentdavis/VersionControl/biopython/Doc/Tutorial/', 'Tutorial/')
+#convert_set('/Users/vincentdavis/VersionControl/biopython/Doc/Tutorial/', 'Tutorial/')
