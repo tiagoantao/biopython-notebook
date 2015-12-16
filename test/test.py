@@ -9,22 +9,16 @@ import nbformat
 
 folder = 'notebooks'
 os.chdir(folder)
-nblist = ['01 - Introduction.ipynb',
-          '02 - Quick Start.ipynb',
-          '03 - Sequence Objects.ipynb',
-          '04 - Sequence Annotation objects.ipynb',
-          '05 - Sequence Input and Output.ipynb',
-          '12 - Bio.PopGen - Population Genetics.ipynb',
-          '13 - Phylogenetics with Bio.Phylo.ipynb',
-          '17 - Graphics including GenomeDiagram.ipynb',
-          '99 - Credits.ipynb']
+nb_list = [fname for fname in os.listdir('.') if fname.endswith('.ipynb')]
+nb_list.sort()
 
 ex = ExecutePreprocessor()
 ex.timeout = 180  # seconds
 ex.interrupt_on_timeout = True
 
 has_error = False
-for notebook in nblist:
+for notebook in nb_list:
+    print(notebook)
     nb = nbformat.read(notebook, as_version=4)
     try:
         nb_executed, resources = ex.preprocess(nb, resources={})
