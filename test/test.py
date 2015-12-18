@@ -18,12 +18,11 @@ ex.interrupt_on_timeout = True
 
 has_error = False
 for notebook in nb_list:
-    print(notebook)
     nb = nbformat.read(notebook, as_version=4)
     try:
         nb_executed, resources = ex.preprocess(nb, resources={})
-        print('Pass: ' + notebook)
     except CellExecutionError as e:
+        print(notebook)
         print('Fail: '  + notebook + ': ' + e.traceback[-1])
         has_error = True
 
