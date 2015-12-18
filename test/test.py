@@ -22,8 +22,7 @@ for notebook in nb_list:
     try:
         nb_executed, resources = ex.preprocess(nb, resources={})
     except CellExecutionError as e:
-        print(notebook)
-        print('Fail: '  + notebook + ': ' + e.traceback[-1])
+        print('Fail: %s \n%s\n\n' % (notebook, e.traceback[-1]))
         has_error = True
 
 os.chdir('..')
