@@ -15,7 +15,7 @@ For docker we need to download a few example files (at least for the
 notebook about Sequence Input and Output)
 
 
-Jypyter conversion effort
+Jupyter conversion effort
 -------------------------
 
 Vincent Davis and Tiago Antao
