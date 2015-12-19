@@ -10,7 +10,8 @@ Most content here is based on the [Biopython tutorial](http://biopython.org/DIST
 
 Docker instructions
 -------------------
-Pre built docker image with these notebooks is avalible [here](https://hub.docker.com/r/biopython/biopython-tutorial/)
+Pre built docker image with these notebooks is avalible [here](https://hub.docker.com/r/biopython/biopython-tutorial/).
+
 For docker we need to download a few example files (at least for the
 notebook about Sequence Input and Output)
 
