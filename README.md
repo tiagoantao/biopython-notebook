@@ -1,8 +1,11 @@
 Biopython notebook Tutorials
 ============================
 
-Notebooks to introduce biopython. The vast majority of the content is
-scooped from somewhere else. This project is focused on making this existing content avalible and interactive with Jupyter notebooks.
+Notebooks to introduce Biopython.
+
+Github renders Jupyter notebooks, you can take a look at the notebooks by starting at the [Tutorial Index notebook](notebooks/00 - Tutorial - Index.ipynb).
+
+The vast majority of the content is scooped from somewhere else. This project is focused on making this existing content avalible and interactive with Jupyter notebooks.
 
 Most content here is based on the [Biopython tutorial](http://biopython.org/DIST/docs/tutorial/Tutorial.html).
 
