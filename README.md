@@ -20,6 +20,13 @@ Docker Containers
 - Basic Docker instructions can be found here [https://github.com/biopython/biopython_docker](https://github.com/biopython/biopython_docker).
 
 
+Python version
+--------------
+
+We support Python 3 out of the box. Legacy versions (e.g. Python 2) are
+currently not supported.
+
+
 Jupyter conversion effort
 -------------------------
 
