@@ -10,8 +10,17 @@ The vast majority of the content is scooped from somewhere else. This project is
 Most content here is based on the [Biopython tutorial](http://biopython.org/DIST/docs/tutorial/Tutorial.html).
 
 
+Run this now on Binder
+----------------------
+
+No installation needed!
+
+[![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/repo/tiagoantao/biopython-notebook)
+
+
 Docker Containers
 -----------------
+
 - A Docker image with these notebooks is avalible here
 [https://hub.docker.com/r/biopython/biopython-tutorial/](https://hub.docker.com/r/biopython/biopython-tutorial/).
 
