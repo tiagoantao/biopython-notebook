@@ -9,6 +9,7 @@ The vast majority of the content is scooped from somewhere else. This project is
 
 Most content here is based on the [Biopython tutorial](http://biopython.org/DIST/docs/tutorial/Tutorial.html).
 
+There is a seperate Biopython Notebook tutorial [here](https://github.com/chris-rands/biopython-coronavirus) on how to characterize a small sequence like a coronavirus genome.
 
 Run this now on Binder
 ----------------------
